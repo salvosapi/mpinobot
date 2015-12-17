@@ -1,7 +1,7 @@
 <?php 
 //$this->config contains configuration and bot Information
 //$this->data contains message and sender information
-class SimpleTinyBot
+class mpinobot
 {
 	private $config;
 	private $commands;
