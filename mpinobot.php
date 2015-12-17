@@ -16,13 +16,13 @@ class mpinobot
 
     fwrite(fopen('log.txt', 'w'), print_r($this->commands, true));
 
-		$this->url = "https://api.telegram.org/bot".$this->config['token'];
+		$this->url = "https://api.telegram.org/bot".$this->config['175716891:AAFvRodZFRvshS5vjyvnPTRoHQis45wthB8'];
 
-		if($this->config['username']=='' || $this->config['first_name']=='')
+		if($this->config['mpinobot']=='' || $this->config['Mpino']=='')
 		{
 			$p = json_decode(file_get_contents($this->url."/getme"),true);
-			$this->config['username'] = $p['result']['username'];
-			$this->config['first_name'] = $p['result']['first_name'];
+			$this->config['mpinobot'] = $p['result']['mpinobot'];
+			$this->config['Mpino'] = $p['result']['Mpino'];
 		}
 
 		$this->data = json_decode(file_get_contents("php://input"),true);
